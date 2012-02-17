@@ -1,0 +1,369 @@
+[0217/125333:FATAL:scheme_impl.cc(620)] Check failed: false. context not valid
+Backtrace:
+	cef_visit_all_cookies [0x10088201+541303]
+	cef_visit_all_cookies [0x1006DDDF+433749]
+	cef_string_multimap_free [0x100F3F02+56530]
+	(No symbol) [0x1014394A]
+	cef_visit_all_cookies [0x100E047F+902389]
+	cef_visit_all_cookies [0x100E032F+902053]
+	cef_visit_all_cookies [0x100DF86C+899298]
+	cef_visit_all_cookies [0x100A558F+660997]
+	(No symbol) [0x11362AEC]
+	(No symbol) [0x11362D73]
+	(No symbol) [0x1136378D]
+	(No symbol) [0x11385004]
+	(No symbol) [0x11384872]
+	(No symbol) [0x11384ADC]
+	(No symbol) [0x11362727]
+	(No symbol) [0x113624FB]
+	(No symbol) [0x11361D27]
+	(No symbol) [0x10190960]
+	(No symbol) [0x1013F376]
+	(No symbol) [0x1013F286]
+	cef_visit_all_cookies [0x100DB3E9+881759]
+	cef_visit_all_cookies [0x100DA163+877017]
+	cef_visit_all_cookies [0x100D6589+861695]
+	cef_visit_all_cookies [0x1000EEC9+44863]
+	CefShutdown [0x006C000C+12] (c:\labory\20120215\cef_binary_1.963.439_windows\libcef_dll\wrapper\libcef_dll_wrapper.cc:98)
+	CMainFrame::~CMainFrame [0x006B93F7+87] (c:\labory\20120215\cef_binary_1.963.439_windows\cef_mfc\mainfrm.cpp:47)
+	CMainFrame::`scalar deleting destructor' [0x006B935B+43]
+	CFrameWnd::PostNcDestroy [0x0071E96C+44] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\winfrm.cpp:264)
+	CWnd::OnNcDestroy [0x007297F0+464] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:890)
+	CWnd::OnWndMsg [0x0072CFF7+2247] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:2354)
+	CWnd::WindowProc [0x0072C6E2+50] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:2067)
+	AfxCallWndProc [0x00727DD3+243] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:248)
+	AfxWndProc [0x007284F6+166] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:411)
+	GetDC [0x7E368734+109]
+	GetDC [0x7E368816+335]
+	DefWindowProcW [0x7E378EA0+384]
+	IsWindowInDestroy [0x7E37B16F+73]
+	KiUserCallbackDispatcher [0x7C90E473+19]
+	CDocument::OnCloseDocument [0x007058EC+156] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\doccore.cpp:857)
+	CDocTemplate::CloseAllDocuments [0x007E4635+69] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\doctempl.cpp:433)
+	CDocManager::CloseAllDocuments [0x008B138C+108] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\docmgr.cpp:666)
+	CWinApp::CloseAllDocuments [0x0074D099+41] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\appui.cpp:102)
+	CFrameWnd::OnClose [0x0072047B+283] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\winfrm.cpp:880)
+	CFrameWndEx::OnClose [0x0076FCD7+119] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\afxframewndex.cpp:405)
+	CWnd::OnWndMsg [0x0072CFF7+2247] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:2354)
+	CWnd::WindowProc [0x0072C6E2+50] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:2067)
+	AfxCallWndProc [0x00727DD3+243] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:248)
+	AfxWndProc [0x007284F6+166] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:411)
+	GetDC [0x7E368734+109]
+	GetDC [0x7E368816+335]
+	DefWindowProcW [0x7E378EA0+384]
+	DefWindowProcW [0x7E378EEC+460]
+	KiUserCallbackDispatcher [0x7C90E473+19]
+	DefWindowProcW [0x7E378DD9+185]
+	DefWindowProcW [0x7E378D77+87]
+	GetDC [0x7E368734+109]
+	GetDC [0x7E368816+335]
+	IsWindowUnicode [0x7E37A013+161]
+	CallWindowProcW [0x7E37A039+27]
+	CWnd::DefWindowProcW [0x00729F84+52] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:1069)
+	CWnd::Default [0x00727FDD+61] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:282)
+	CWnd::OnSysCommand [0x0070E451+17] (f:\dd\vctools\vc7libs\ship\atlmfc\include\afxwin2.inl:470)
+
+[0217/125343:FATAL:scheme_impl.cc(648)] Check failed: false. context not valid
+Backtrace:
+	cef_visit_all_cookies [0x10088201+541303]
+	cef_visit_all_cookies [0x1006DDDF+433749]
+	cef_string_multimap_free [0x100F45D6+58278]
+	(No symbol) [0x101439B1]
+	cef_visit_all_cookies [0x100E047F+902389]
+	cef_visit_all_cookies [0x100E032F+902053]
+	cef_visit_all_cookies [0x100DF86C+899298]
+	cef_visit_all_cookies [0x100A558F+660997]
+	(No symbol) [0x11362AEC]
+	(No symbol) [0x11362D73]
+	(No symbol) [0x1136378D]
+	(No symbol) [0x11385004]
+	(No symbol) [0x11384872]
+	(No symbol) [0x11384ADC]
+	(No symbol) [0x11362727]
+	(No symbol) [0x113624FB]
+	(No symbol) [0x11361D27]
+	(No symbol) [0x10190960]
+	(No symbol) [0x1013F376]
+	(No symbol) [0x1013F286]
+	cef_visit_all_cookies [0x100DB3E9+881759]
+	cef_visit_all_cookies [0x100DA163+877017]
+	cef_visit_all_cookies [0x100D6589+861695]
+	cef_visit_all_cookies [0x1000EEC9+44863]
+	CefShutdown [0x006C000C+12] (c:\labory\20120215\cef_binary_1.963.439_windows\libcef_dll\wrapper\libcef_dll_wrapper.cc:98)
+	CMainFrame::~CMainFrame [0x006B93F7+87] (c:\labory\20120215\cef_binary_1.963.439_windows\cef_mfc\mainfrm.cpp:47)
+	CMainFrame::`scalar deleting destructor' [0x006B935B+43]
+	CFrameWnd::PostNcDestroy [0x0071E96C+44] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\winfrm.cpp:264)
+	CWnd::OnNcDestroy [0x007297F0+464] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:890)
+	CWnd::OnWndMsg [0x0072CFF7+2247] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:2354)
+	CWnd::WindowProc [0x0072C6E2+50] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:2067)
+	AfxCallWndProc [0x00727DD3+243] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:248)
+	AfxWndProc [0x007284F6+166] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:411)
+	GetDC [0x7E368734+109]
+	GetDC [0x7E368816+335]
+	DefWindowProcW [0x7E378EA0+384]
+	IsWindowInDestroy [0x7E37B16F+73]
+	KiUserCallbackDispatcher [0x7C90E473+19]
+	CDocument::OnCloseDocument [0x007058EC+156] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\doccore.cpp:857)
+	CDocTemplate::CloseAllDocuments [0x007E4635+69] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\doctempl.cpp:433)
+	CDocManager::CloseAllDocuments [0x008B138C+108] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\docmgr.cpp:666)
+	CWinApp::CloseAllDocuments [0x0074D099+41] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\appui.cpp:102)
+	CFrameWnd::OnClose [0x0072047B+283] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\winfrm.cpp:880)
+	CFrameWndEx::OnClose [0x0076FCD7+119] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\afxframewndex.cpp:405)
+	CWnd::OnWndMsg [0x0072CFF7+2247] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:2354)
+	CWnd::WindowProc [0x0072C6E2+50] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:2067)
+	AfxCallWndProc [0x00727DD3+243] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:248)
+	AfxWndProc [0x007284F6+166] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:411)
+	GetDC [0x7E368734+109]
+	GetDC [0x7E368816+335]
+	DefWindowProcW [0x7E378EA0+384]
+	DefWindowProcW [0x7E378EEC+460]
+	KiUserCallbackDispatcher [0x7C90E473+19]
+	DefWindowProcW [0x7E378DD9+185]
+	DefWindowProcW [0x7E378D77+87]
+	GetDC [0x7E368734+109]
+	GetDC [0x7E368816+335]
+	IsWindowUnicode [0x7E37A013+161]
+	CallWindowProcW [0x7E37A039+27]
+	CWnd::DefWindowProcW [0x00729F84+52] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:1069)
+	CWnd::Default [0x00727FDD+61] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:282)
+	CWnd::OnSysCommand [0x0070E451+17] (f:\dd\vctools\vc7libs\ship\atlmfc\include\afxwin2.inl:470)
+
+[0217/125345:FATAL:browser_impl.cc(136)] Check failed: false. context not valid
+Backtrace:
+	cef_visit_all_cookies [0x10088201+541303]
+	cef_visit_all_cookies [0x1006DDDF+433749]
+	cef_string_multimap_free [0x1010B67C+152652]
+	cef_string_multimap_free [0x1010AF94+150884]
+	cef_string_multimap_free [0x1011FDBF+236431]
+	cef_string_multimap_free [0x1011BE8A+220250]
+	(No symbol) [0x1135F922]
+	(No symbol) [0x1136AC1B]
+	(No symbol) [0x1136AB41]
+	(No symbol) [0x1136A82C]
+	cef_visit_all_cookies [0x100A558F+660997]
+	(No symbol) [0x11362AEC]
+	(No symbol) [0x11362D73]
+	(No symbol) [0x1136378D]
+	(No symbol) [0x11385004]
+	(No symbol) [0x11384872]
+	(No symbol) [0x11384ADC]
+	(No symbol) [0x11362727]
+	(No symbol) [0x113624FB]
+	(No symbol) [0x11361D27]
+	(No symbol) [0x10190960]
+	(No symbol) [0x1013F376]
+	(No symbol) [0x1013F286]
+	cef_visit_all_cookies [0x100DB3E9+881759]
+	cef_visit_all_cookies [0x100DA163+877017]
+	cef_visit_all_cookies [0x100D6589+861695]
+	cef_visit_all_cookies [0x1000EEC9+44863]
+	CefShutdown [0x006C000C+12] (c:\labory\20120215\cef_binary_1.963.439_windows\libcef_dll\wrapper\libcef_dll_wrapper.cc:98)
+	CMainFrame::~CMainFrame [0x006B93F7+87] (c:\labory\20120215\cef_binary_1.963.439_windows\cef_mfc\mainfrm.cpp:47)
+	CMainFrame::`scalar deleting destructor' [0x006B935B+43]
+	CFrameWnd::PostNcDestroy [0x0071E96C+44] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\winfrm.cpp:264)
+	CWnd::OnNcDestroy [0x007297F0+464] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:890)
+	CWnd::OnWndMsg [0x0072CFF7+2247] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:2354)
+	CWnd::WindowProc [0x0072C6E2+50] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:2067)
+	AfxCallWndProc [0x00727DD3+243] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:248)
+	AfxWndProc [0x007284F6+166] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:411)
+	GetDC [0x7E368734+109]
+	GetDC [0x7E368816+335]
+	DefWindowProcW [0x7E378EA0+384]
+	IsWindowInDestroy [0x7E37B16F+73]
+	KiUserCallbackDispatcher [0x7C90E473+19]
+	CDocument::OnCloseDocument [0x007058EC+156] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\doccore.cpp:857)
+	CDocTemplate::CloseAllDocuments [0x007E4635+69] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\doctempl.cpp:433)
+	CDocManager::CloseAllDocuments [0x008B138C+108] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\docmgr.cpp:666)
+	CWinApp::CloseAllDocuments [0x0074D099+41] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\appui.cpp:102)
+	CFrameWnd::OnClose [0x0072047B+283] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\winfrm.cpp:880)
+	CFrameWndEx::OnClose [0x0076FCD7+119] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\afxframewndex.cpp:405)
+	CWnd::OnWndMsg [0x0072CFF7+2247] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:2354)
+	CWnd::WindowProc [0x0072C6E2+50] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:2067)
+	AfxCallWndProc [0x00727DD3+243] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:248)
+	AfxWndProc [0x007284F6+166] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:411)
+	GetDC [0x7E368734+109]
+	GetDC [0x7E368816+335]
+	DefWindowProcW [0x7E378EA0+384]
+	DefWindowProcW [0x7E378EEC+460]
+	KiUserCallbackDispatcher [0x7C90E473+19]
+	DefWindowProcW [0x7E378DD9+185]
+	DefWindowProcW [0x7E378D77+87]
+	GetDC [0x7E368734+109]
+	GetDC [0x7E368816+335]
+	IsWindowUnicode [0x7E37A013+161]
+	CallWindowProcW [0x7E37A039+27]
+
+[0217/145330:FATAL:browser_impl.cc(148)] Check failed: false. called on invalid thread
+Backtrace:
+	cef_visit_all_cookies [0x10088201+541303]
+	cef_visit_all_cookies [0x1006DDDF+433749]
+	cef_string_multimap_free [0x1010B7C3+152979]
+	cef_visit_all_cookies [0x10048C8D+281859]
+	CefBrowser::CreateBrowserSync [0x006BBD4C+188] (c:\labory\20120215\cef_binary_1.963.439_windows\libcef_dll\ctocpp\browser_ctocpp.cc:62)
+	CCEFDoc::OnNewDocument [0x006B0759+585] (c:\labory\20120215\cef_binary_1.963.439_windows\cef_mfc\cefdoc.cpp:66)
+	CSingleDocTemplate::OpenDocumentFile [0x0074E057+551] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\docsingl.cpp:152)
+	CSingleDocTemplate::OpenDocumentFile [0x0074DE13+35] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\docsingl.cpp:84)
+	CDocManager::OnFileNew [0x008B250C+348] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\docmgr.cpp:926)
+	CWinApp::OnFileNew [0x00747EF5+37] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\appdlg.cpp:22)
+	_AfxDispatchCmdMsg [0x00709FC2+178] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\cmdtarg.cpp:82)
+	CCmdTarget::OnCmdMsg [0x0070A846+742] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\cmdtarg.cpp:381)
+	CWinApp::ProcessShellCommand [0x0074BB5F+175] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\appui2.cpp:35)
+	CCEFApp::InitInstance [0x006B5A3B+443] (c:\labory\20120215\cef_binary_1.963.439_windows\cef_mfc\cef_mfc.cpp:132)
+	AfxWinMain [0x00B7F5A4+132] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\winmain.cpp:37)
+	wWinMain [0x00B7F49A+26] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\appmodul.cpp:26)
+	__tmainCRTStartup [0x00B064F2+322] (f:\dd\vctools\crt_bld\self_x86\crt\src\crt0.c:275)
+	wWinMainCRTStartup [0x00B0639F+15] (f:\dd\vctools\crt_bld\self_x86\crt\src\crt0.c:189)
+	RegisterWaitForInputIdle [0x7C817077+73]
+
+[0217/145431:FATAL:browser_impl.cc(148)] Check failed: false. called on invalid thread
+Backtrace:
+	cef_visit_all_cookies [0x10088201+541303]
+	cef_visit_all_cookies [0x1006DDDF+433749]
+	cef_string_multimap_free [0x1010B7C3+152979]
+	cef_visit_all_cookies [0x10048C8D+281859]
+	CefBrowser::CreateBrowserSync [0x006BBD4C+188] (c:\labory\20120215\cef_binary_1.963.439_windows\libcef_dll\ctocpp\browser_ctocpp.cc:62)
+	CCEFDoc::OnNewDocument [0x006B0759+585] (c:\labory\20120215\cef_binary_1.963.439_windows\cef_mfc\cefdoc.cpp:66)
+	CSingleDocTemplate::OpenDocumentFile [0x0074E057+551] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\docsingl.cpp:152)
+	CSingleDocTemplate::OpenDocumentFile [0x0074DE13+35] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\docsingl.cpp:84)
+	CDocManager::OnFileNew [0x008B250C+348] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\docmgr.cpp:926)
+	CWinApp::OnFileNew [0x00747EF5+37] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\appdlg.cpp:22)
+	_AfxDispatchCmdMsg [0x00709FC2+178] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\cmdtarg.cpp:82)
+	CCmdTarget::OnCmdMsg [0x0070A846+742] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\cmdtarg.cpp:381)
+	CWinApp::ProcessShellCommand [0x0074BB5F+175] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\appui2.cpp:35)
+	CCEFApp::InitInstance [0x006B5A3B+443] (c:\labory\20120215\cef_binary_1.963.439_windows\cef_mfc\cef_mfc.cpp:132)
+	AfxWinMain [0x00B7F5A4+132] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\winmain.cpp:37)
+	wWinMain [0x00B7F49A+26] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\appmodul.cpp:26)
+	__tmainCRTStartup [0x00B064F2+322] (f:\dd\vctools\crt_bld\self_x86\crt\src\crt0.c:275)
+	wWinMainCRTStartup [0x00B0639F+15] (f:\dd\vctools\crt_bld\self_x86\crt\src\crt0.c:189)
+	RegisterWaitForInputIdle [0x7C817077+73]
+
+[0217/145713:FATAL:scheme_impl.cc(620)] Check failed: false. context not valid
+Backtrace:
+	cef_visit_all_cookies [0x10088201+541303]
+	cef_visit_all_cookies [0x1006DDDF+433749]
+	cef_string_multimap_free [0x100F3F02+56530]
+	(No symbol) [0x1014394A]
+	cef_visit_all_cookies [0x100E047F+902389]
+	cef_visit_all_cookies [0x100E032F+902053]
+	cef_visit_all_cookies [0x100DF86C+899298]
+	cef_visit_all_cookies [0x100A558F+660997]
+	(No symbol) [0x11362AEC]
+	(No symbol) [0x11362D73]
+	(No symbol) [0x1136378D]
+	(No symbol) [0x11385004]
+	(No symbol) [0x11384872]
+	(No symbol) [0x11384ADC]
+	(No symbol) [0x11362727]
+	(No symbol) [0x113624FB]
+	(No symbol) [0x11361D27]
+	(No symbol) [0x10190960]
+	(No symbol) [0x1013F376]
+	(No symbol) [0x1013F286]
+	cef_visit_all_cookies [0x100DB3E9+881759]
+	cef_visit_all_cookies [0x100DA163+877017]
+	cef_visit_all_cookies [0x100D6589+861695]
+	cef_visit_all_cookies [0x1000EEC9+44863]
+	CefShutdown [0x006C004C+12] (c:\labory\20120215\cef_binary_1.963.439_windows\libcef_dll\wrapper\libcef_dll_wrapper.cc:98)
+	CMainFrame::~CMainFrame [0x006B94B7+87] (c:\labory\20120215\cef_binary_1.963.439_windows\cef_mfc\mainfrm.cpp:47)
+	CMainFrame::`scalar deleting destructor' [0x006B941B+43]
+	CFrameWnd::PostNcDestroy [0x0071E9AC+44] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\winfrm.cpp:264)
+	CWnd::OnNcDestroy [0x00729830+464] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:890)
+	CWnd::OnWndMsg [0x0072D037+2247] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:2354)
+	CWnd::WindowProc [0x0072C722+50] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:2067)
+	AfxCallWndProc [0x00727E13+243] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:248)
+	AfxWndProc [0x00728536+166] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:411)
+	GetDC [0x7E368734+109]
+	GetDC [0x7E368816+335]
+	DefWindowProcW [0x7E378EA0+384]
+	IsWindowInDestroy [0x7E37B16F+73]
+	KiUserCallbackDispatcher [0x7C90E473+19]
+	CDocument::OnCloseDocument [0x0070592C+156] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\doccore.cpp:857)
+	CDocTemplate::CloseAllDocuments [0x007E4675+69] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\doctempl.cpp:433)
+	CDocManager::CloseAllDocuments [0x008B13CC+108] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\docmgr.cpp:666)
+	CWinApp::CloseAllDocuments [0x0074D0D9+41] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\appui.cpp:102)
+	CFrameWnd::OnClose [0x007204BB+283] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\winfrm.cpp:880)
+	CFrameWndEx::OnClose [0x0076FD17+119] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\afxframewndex.cpp:405)
+	CWnd::OnWndMsg [0x0072D037+2247] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:2354)
+	CWnd::WindowProc [0x0072C722+50] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:2067)
+	AfxCallWndProc [0x00727E13+243] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:248)
+	AfxWndProc [0x00728536+166] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:411)
+	GetDC [0x7E368734+109]
+	GetDC [0x7E368816+335]
+	DefWindowProcW [0x7E378EA0+384]
+	DefWindowProcW [0x7E378EEC+460]
+	KiUserCallbackDispatcher [0x7C90E473+19]
+	DefWindowProcW [0x7E378DD9+185]
+	DefWindowProcW [0x7E378D77+87]
+	GetDC [0x7E368734+109]
+	GetDC [0x7E368816+335]
+	IsWindowUnicode [0x7E37A013+161]
+	CallWindowProcW [0x7E37A039+27]
+	CWnd::DefWindowProcW [0x00729FC4+52] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:1069)
+	CWnd::Default [0x0072801D+61] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:282)
+	CWnd::OnSysCommand [0x0070E491+17] (f:\dd\vctools\vc7libs\ship\atlmfc\include\afxwin2.inl:470)
+
+[0217/145737:FATAL:scheme_impl.cc(648)] Check failed: false. context not valid
+Backtrace:
+	cef_visit_all_cookies [0x10088201+541303]
+	cef_visit_all_cookies [0x1006DDDF+433749]
+	cef_string_multimap_free [0x100F45D6+58278]
+	(No symbol) [0x101439B1]
+	cef_visit_all_cookies [0x100E047F+902389]
+	cef_visit_all_cookies [0x100E032F+902053]
+	cef_visit_all_cookies [0x100DF86C+899298]
+	cef_visit_all_cookies [0x100A558F+660997]
+	(No symbol) [0x11362AEC]
+	(No symbol) [0x11362D73]
+	(No symbol) [0x1136378D]
+	(No symbol) [0x11385004]
+	(No symbol) [0x11384872]
+	(No symbol) [0x11384ADC]
+	(No symbol) [0x11362727]
+	(No symbol) [0x113624FB]
+	(No symbol) [0x11361D27]
+	(No symbol) [0x10190960]
+	(No symbol) [0x1013F376]
+	(No symbol) [0x1013F286]
+	cef_visit_all_cookies [0x100DB3E9+881759]
+	cef_visit_all_cookies [0x100DA163+877017]
+	cef_visit_all_cookies [0x100D6589+861695]
+	cef_visit_all_cookies [0x1000EEC9+44863]
+	CefShutdown [0x006C004C+12] (c:\labory\20120215\cef_binary_1.963.439_windows\libcef_dll\wrapper\libcef_dll_wrapper.cc:98)
+	CMainFrame::~CMainFrame [0x006B94B7+87] (c:\labory\20120215\cef_binary_1.963.439_windows\cef_mfc\mainfrm.cpp:47)
+	CMainFrame::`scalar deleting destructor' [0x006B941B+43]
+	CFrameWnd::PostNcDestroy [0x0071E9AC+44] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\winfrm.cpp:264)
+	CWnd::OnNcDestroy [0x00729830+464] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:890)
+	CWnd::OnWndMsg [0x0072D037+2247] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:2354)
+	CWnd::WindowProc [0x0072C722+50] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:2067)
+	AfxCallWndProc [0x00727E13+243] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:248)
+	AfxWndProc [0x00728536+166] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:411)
+	GetDC [0x7E368734+109]
+	GetDC [0x7E368816+335]
+	DefWindowProcW [0x7E378EA0+384]
+	IsWindowInDestroy [0x7E37B16F+73]
+	KiUserCallbackDispatcher [0x7C90E473+19]
+	CDocument::OnCloseDocument [0x0070592C+156] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\doccore.cpp:857)
+	CDocTemplate::CloseAllDocuments [0x007E4675+69] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\doctempl.cpp:433)
+	CDocManager::CloseAllDocuments [0x008B13CC+108] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\docmgr.cpp:666)
+	CWinApp::CloseAllDocuments [0x0074D0D9+41] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\appui.cpp:102)
+	CFrameWnd::OnClose [0x007204BB+283] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\winfrm.cpp:880)
+	CFrameWndEx::OnClose [0x0076FD17+119] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\afxframewndex.cpp:405)
+	CWnd::OnWndMsg [0x0072D037+2247] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:2354)
+	CWnd::WindowProc [0x0072C722+50] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:2067)
+	AfxCallWndProc [0x00727E13+243] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:248)
+	AfxWndProc [0x00728536+166] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:411)
+	GetDC [0x7E368734+109]
+	GetDC [0x7E368816+335]
+	DefWindowProcW [0x7E378EA0+384]
+	DefWindowProcW [0x7E378EEC+460]
+	KiUserCallbackDispatcher [0x7C90E473+19]
+	DefWindowProcW [0x7E378DD9+185]
+	DefWindowProcW [0x7E378D77+87]
+	GetDC [0x7E368734+109]
+	GetDC [0x7E368816+335]
+	IsWindowUnicode [0x7E37A013+161]
+	CallWindowProcW [0x7E37A039+27]
+	CWnd::DefWindowProcW [0x00729FC4+52] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:1069)
+	CWnd::Default [0x0072801D+61] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:282)
+	CWnd::OnSysCommand [0x0070E491+17] (f:\dd\vctools\vc7libs\ship\atlmfc\include\afxwin2.inl:470)
+

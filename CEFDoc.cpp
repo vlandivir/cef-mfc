@@ -42,14 +42,33 @@ BOOL CCEFDoc::OnNewDocument()
 	if (!CDocument::OnNewDocument())
 		return FALSE;
 
+	CView* pView;
+	POSITION pos = GetFirstViewPosition();
+    if (pos != NULL)
+    {
+      pView = GetNextView(pos);   
+    }
+
+    CefSettings settings;
+	settings.multi_threaded_message_loop = true;
+	CefRefPtr<CefApp> app;
+    // Initialize CEF.
+    CefInitialize(settings, app);
+
+    CefWindowInfo info;
+	RECT rect;
+	pView->GetClientRect(&rect);
+	info.SetAsChild(pView->GetSafeHwnd(), rect);
+
+	CefBrowserSettings browserSettings;
+
+    CefRefPtr<CefClient> client(new ClientHandler());
+	CefBrowser::CreateBrowser(info, client, L"http://www.google.com", browserSettings); 
 	// TODO: add reinitialization code here
 	// (SDI documents will reuse this document)
 
 	return TRUE;
 }
-
-
-
 
 // CCEFDoc serialization
 

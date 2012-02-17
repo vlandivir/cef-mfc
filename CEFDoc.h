@@ -5,6 +5,8 @@
 
 #pragma once
 
+#include "include/cef.h"
+#include "ClientHandler.h"
 
 class CCEFDoc : public CDocument
 {

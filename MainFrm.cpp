@@ -4,6 +4,7 @@
 
 #include "stdafx.h"
 #include "cef_mfc.h"
+#include "include/cef.h"
 
 #include "MainFrm.h"
 
@@ -42,6 +43,7 @@ CMainFrame::CMainFrame()
 
 CMainFrame::~CMainFrame()
 {
+	CefShutdown();
 }
 
 int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)

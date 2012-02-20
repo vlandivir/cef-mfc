@@ -367,3 +367,203 @@ Backtrace:
 	CWnd::Default [0x0072801D+61] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:282)
 	CWnd::OnSysCommand [0x0070E491+17] (f:\dd\vctools\vc7libs\ship\atlmfc\include\afxwin2.inl:470)
 
+[0217/170104:FATAL:string_util.cc(428)] Check failed: IsStringASCII(utf16). рєфшю/x-gsm|рєфшю/AMR|audio/aac|audio/x-aac|audio/x-caf|audio/ac3|audio/x-ac3|тшфхю/x-mpeg
+Backtrace:
+	cef_visit_all_cookies [0x10088201+541303]
+	cef_visit_all_cookies [0x1006DDDF+433749]
+	cef_visit_all_cookies [0x100967F9+600175]
+	(No symbol) [0x11E527AA]
+	(No symbol) [0x11E1DB15]
+	(No symbol) [0x11E1E405]
+	(No symbol) [0x11E1E16F]
+	(No symbol) [0x11E1E273]
+	(No symbol) [0x11E1EB43]
+	(No symbol) [0x101AB8A2]
+	(No symbol) [0x11E4BF6F]
+	(No symbol) [0x11C009AA]
+	(No symbol) [0x108495CA]
+	(No symbol) [0x1084954A]
+	(No symbol) [0x10B26915]
+	(No symbol) [0x108E0A93]
+	(No symbol) [0x108E0A30]
+	(No symbol) [0x10B034F4]
+	(No symbol) [0x10B0317F]
+	(No symbol) [0x1118DC62]
+	(No symbol) [0x1045010A]
+	(No symbol) [0x10452096]
+	(No symbol) [0x10475403]
+	(No symbol) [0x1047579F]
+	(No symbol) [0x104520FA]
+	(No symbol) [0x10451B44]
+	(No symbol) [0x1065ECE0]
+	(No symbol) [0x10663744]
+
+[0217/170109:FATAL:string_util.cc(428)] Check failed: IsStringASCII(utf16). тшфхю/mpeg|audio/mpeg|рєфшю/x-mpeg|video/3gpp
+Backtrace:
+	cef_visit_all_cookies [0x10088201+541303]
+	cef_visit_all_cookies [0x1006DDDF+433749]
+	cef_visit_all_cookies [0x100967F9+600175]
+	(No symbol) [0x11E527AA]
+	(No symbol) [0x11E1DB15]
+	(No symbol) [0x11E1E405]
+	(No symbol) [0x11E1E16F]
+	(No symbol) [0x11E1E273]
+	(No symbol) [0x11E1EB43]
+	(No symbol) [0x101AB8A2]
+	(No symbol) [0x11E4BF6F]
+	(No symbol) [0x11C009AA]
+	(No symbol) [0x108495CA]
+	(No symbol) [0x1084954A]
+	(No symbol) [0x10B26915]
+	(No symbol) [0x108E0A93]
+	(No symbol) [0x108E0A30]
+	(No symbol) [0x10B034F4]
+	(No symbol) [0x10B0317F]
+	(No symbol) [0x1118DC62]
+	(No symbol) [0x1045010A]
+	(No symbol) [0x10452096]
+	(No symbol) [0x10475403]
+	(No symbol) [0x1047579F]
+	(No symbol) [0x104520FA]
+	(No symbol) [0x10451B44]
+	(No symbol) [0x1065ECE0]
+	(No symbol) [0x10663744]
+
+[0217/170111:FATAL:string_util.cc(428)] Check failed: IsStringASCII(utf16). тшфхю/x-m4v|image/x-macpaint|image/pict|image/x-pict|image/png|image/x-png|image/x-quicktime
+Backtrace:
+	cef_visit_all_cookies [0x10088201+541303]
+	cef_visit_all_cookies [0x1006DDDF+433749]
+	cef_visit_all_cookies [0x100967F9+600175]
+	(No symbol) [0x11E527AA]
+	(No symbol) [0x11E1DB15]
+	(No symbol) [0x11E1E405]
+	(No symbol) [0x11E1E16F]
+	(No symbol) [0x11E1E273]
+	(No symbol) [0x11E1EB43]
+	(No symbol) [0x101AB8A2]
+	(No symbol) [0x11E4BF6F]
+	(No symbol) [0x11C009AA]
+	(No symbol) [0x108495CA]
+	(No symbol) [0x1084954A]
+	(No symbol) [0x10B26915]
+	(No symbol) [0x108E0A93]
+	(No symbol) [0x108E0A30]
+	(No symbol) [0x10B034F4]
+	(No symbol) [0x10B0317F]
+	(No symbol) [0x1118DC62]
+	(No symbol) [0x1045010A]
+	(No symbol) [0x10452096]
+	(No symbol) [0x10475403]
+	(No symbol) [0x1047579F]
+	(No symbol) [0x104520FA]
+	(No symbol) [0x10451B44]
+	(No symbol) [0x1065ECE0]
+	(No symbol) [0x10663744]
+
+[0217/170144:INFO:CONSOLE(0)] "Unsafe JavaScript attempt to access frame with URL http://eva.ru/albumpage/132417/867131/5227630.htm from frame with URL http://ad.eva.ru/ad/adframe.php?n=aeb65c9a&what=zone:791. Domains, protocols and ports must match.
+," source: (1)
+[0217/172240:FATAL:cef_process.cc(98)] Check failed: CalledOnValidThread() && ui_message_loop_.get() != NULL. 
+Backtrace:
+	cef_visit_all_cookies [0x10088201+541303]
+	cef_visit_all_cookies [0x1006DDDF+433749]
+	(No symbol) [0x1013F4C2]
+	cef_visit_all_cookies [0x100D67B0+862246]
+	cef_visit_all_cookies [0x10010AC8+52030]
+	CefDoMessageLoopWork [0x006C159C+12] (c:\labory\20120215\cef_binary_1.963.439_windows\libcef_dll\wrapper\libcef_dll_wrapper.cc:158)
+	CCEFApp::PreTranslateMessage [0x006B67E8+40] (c:\labory\20120215\cef_binary_1.963.439_windows\cef_mfc\cef_mfc.cpp:220)
+	AfxPreTranslateMessage [0x0074AD35+37] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\thrdcore.cpp:252)
+	AfxInternalPumpMessage [0x0074AB01+225] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\thrdcore.cpp:178)
+	CWinThread::PumpMessage [0x0074C5BE+14] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\thrdcore.cpp:900)
+	CWinThread::Run [0x0074BBAD+141] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\thrdcore.cpp:629)
+	CWinApp::Run [0x00745DD9+89] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\appcore.cpp:822)
+	AfxWinMain [0x00B8047F+239] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\winmain.cpp:47)
+	wWinMain [0x00B8030A+26] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\appmodul.cpp:26)
+	__tmainCRTStartup [0x00B07362+322] (f:\dd\vctools\crt_bld\self_x86\crt\src\crt0.c:275)
+	wWinMainCRTStartup [0x00B0720F+15] (f:\dd\vctools\crt_bld\self_x86\crt\src\crt0.c:189)
+	RegisterWaitForInputIdle [0x7C817077+73]
+
+[0217/172323:FATAL:cef_process.cc(98)] Check failed: CalledOnValidThread() && ui_message_loop_.get() != NULL. 
+Backtrace:
+	cef_visit_all_cookies [0x10088201+541303]
+	cef_visit_all_cookies [0x1006DDDF+433749]
+	(No symbol) [0x1013F4C2]
+	cef_visit_all_cookies [0x100D67B0+862246]
+	cef_visit_all_cookies [0x10010AC8+52030]
+	CefDoMessageLoopWork [0x006C159C+12] (c:\labory\20120215\cef_binary_1.963.439_windows\libcef_dll\wrapper\libcef_dll_wrapper.cc:158)
+	CCEFApp::PreTranslateMessage [0x006B67E8+40] (c:\labory\20120215\cef_binary_1.963.439_windows\cef_mfc\cef_mfc.cpp:220)
+	AfxPreTranslateMessage [0x0074AD35+37] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\thrdcore.cpp:252)
+	AfxInternalPumpMessage [0x0074AB01+225] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\thrdcore.cpp:178)
+	CWinThread::PumpMessage [0x0074C5BE+14] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\thrdcore.cpp:900)
+	CWinThread::Run [0x0074BBAD+141] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\thrdcore.cpp:629)
+	CWinApp::Run [0x00745DD9+89] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\appcore.cpp:822)
+	AfxWinMain [0x00B8047F+239] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\winmain.cpp:47)
+	wWinMain [0x00B8030A+26] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\appmodul.cpp:26)
+	__tmainCRTStartup [0x00B07362+322] (f:\dd\vctools\crt_bld\self_x86\crt\src\crt0.c:275)
+	wWinMainCRTStartup [0x00B0720F+15] (f:\dd\vctools\crt_bld\self_x86\crt\src\crt0.c:189)
+	RegisterWaitForInputIdle [0x7C817077+73]
+
+[0220/105911:FATAL:libcef_dll.cc(100)] Check failed: CefBrowserCppToC::DebugObjCt == 0. 
+Backtrace:
+	cef_visit_all_cookies [0x10088201+541303]
+	cef_visit_all_cookies [0x1006DDDF+433749]
+	cef_visit_all_cookies [0x1000EF38+44974]
+	CefShutdown [0x006C0EDC+12] (c:\labory\20120215\cef_binary_1.963.439_windows\libcef_dll\wrapper\libcef_dll_wrapper.cc:98)
+	CMainFrame::~CMainFrame [0x006BA2C7+87] (c:\labory\20120215\cef_binary_1.963.439_windows\cef_mfc\mainfrm.cpp:47)
+	CMainFrame::`scalar deleting destructor' [0x006BA22B+43]
+	CFrameWnd::PostNcDestroy [0x0071F83C+44] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\winfrm.cpp:264)
+	CWnd::OnNcDestroy [0x0072A6C0+464] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:890)
+	CWnd::OnWndMsg [0x0072DEC7+2247] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:2354)
+	CWnd::WindowProc [0x0072D5B2+50] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:2067)
+	AfxCallWndProc [0x00728CA3+243] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:248)
+	AfxWndProc [0x007293C6+166] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:411)
+	GetDC [0x7E368734+109]
+	GetDC [0x7E368816+335]
+	DefWindowProcW [0x7E378EA0+384]
+	IsWindowInDestroy [0x7E37B16F+73]
+	KiUserCallbackDispatcher [0x7C90E473+19]
+	CDocument::OnCloseDocument [0x007067BC+156] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\doccore.cpp:857)
+	CDocTemplate::CloseAllDocuments [0x007E5505+69] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\doctempl.cpp:433)
+	CDocManager::CloseAllDocuments [0x008B225C+108] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\docmgr.cpp:666)
+	CWinApp::CloseAllDocuments [0x0074DF69+41] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\appui.cpp:102)
+	CFrameWnd::OnClose [0x0072134B+283] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\winfrm.cpp:880)
+	CFrameWndEx::OnClose [0x00770BA7+119] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\afxframewndex.cpp:405)
+	CWnd::OnWndMsg [0x0072DEC7+2247] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:2354)
+	CWnd::WindowProc [0x0072D5B2+50] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:2067)
+	AfxCallWndProc [0x00728CA3+243] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:248)
+	AfxWndProc [0x007293C6+166] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:411)
+	GetDC [0x7E368734+109]
+	GetDC [0x7E368816+335]
+	DefWindowProcW [0x7E378EA0+384]
+	DefWindowProcW [0x7E378EEC+460]
+	KiUserCallbackDispatcher [0x7C90E473+19]
+	DefWindowProcW [0x7E378DD9+185]
+	DefWindowProcW [0x7E378D77+87]
+	GetDC [0x7E368734+109]
+	GetDC [0x7E368816+335]
+	IsWindowUnicode [0x7E37A013+161]
+	CallWindowProcW [0x7E37A039+27]
+	CWnd::DefWindowProcW [0x0072AE54+52] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:1069)
+	CWnd::Default [0x00728EAD+61] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:282)
+	CWnd::OnSysCommand [0x0070F321+17] (f:\dd\vctools\vc7libs\ship\atlmfc\include\afxwin2.inl:470)
+	CFrameWnd::OnSysCommand [0x00721D51+257] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\winfrm.cpp:1130)
+	CWnd::OnWndMsg [0x0072DFB7+2487] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:2382)
+	CWnd::WindowProc [0x0072D5B2+50] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:2067)
+	AfxCallWndProc [0x00728CA3+243] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:248)
+	AfxWndProc [0x007293C6+166] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:411)
+	GetDC [0x7E368734+109]
+	GetDC [0x7E368816+335]
+	DefWindowProcW [0x7E378EA0+384]
+	DefWindowProcW [0x7E378EEC+460]
+	KiUserCallbackDispatcher [0x7C90E473+19]
+	DefWindowProcW [0x7E378DD9+185]
+	DefWindowProcW [0x7E378D77+87]
+	GetDC [0x7E368734+109]
+	GetDC [0x7E368816+335]
+	IsWindowUnicode [0x7E37A013+161]
+	CallWindowProcW [0x7E37A039+27]
+	CWnd::DefWindowProcW [0x0072AE54+52] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:1069)
+	CWnd::WindowProc [0x0072D5D2+82] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:2068)
+	AfxCallWndProc [0x00728CA3+243] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:248)
+	AfxWndProc [0x007293C6+166] (f:\dd\vctools\vc7libs\ship\atlmfc\src\mfc\wincore.cpp:411)
+	GetDC [0x7E368734+109]
+

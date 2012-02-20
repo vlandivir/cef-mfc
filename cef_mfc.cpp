@@ -211,3 +211,10 @@ void CCEFApp::SaveCustomState()
 
 
 
+
+
+BOOL CCEFApp::PreTranslateMessage(MSG* pMsg)
+{
+	// TODO: Add your specialized code here and/or call the base class
+	return CWinAppEx::PreTranslateMessage(pMsg);
+}

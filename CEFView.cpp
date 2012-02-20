@@ -28,6 +28,7 @@ BEGIN_MESSAGE_MAP(CCEFView, CView)
 	ON_COMMAND(ID_FILE_PRINT_PREVIEW, &CCEFView::OnFilePrintPreview)
 	ON_WM_CONTEXTMENU()
 	ON_WM_RBUTTONUP()
+	ON_WM_SIZE()
 END_MESSAGE_MAP()
 
 // CCEFView construction/destruction
@@ -125,3 +126,47 @@ CCEFDoc* CCEFView::GetDocument() const // non-debug version is inline
 
 
 // CCEFView message handlers
+
+
+void CCEFView::OnInitialUpdate()
+{
+	CView::OnInitialUpdate();
+
+    CefRefPtr<ClientHandler> client(new ClientHandler());
+	m_clientHandler = client;
+
+    CefSettings settings;
+	settings.multi_threaded_message_loop = true;
+	CefRefPtr<CefApp> app;
+    // Initialize CEF.
+    CefInitialize(settings, app);
+
+    CefWindowInfo info;
+	RECT rect;
+	GetClientRect(&rect);
+	info.SetAsChild(GetSafeHwnd(), rect);
+
+	CefBrowserSettings browserSettings;
+
+	CefBrowser::CreateBrowser(info, static_cast<CefRefPtr<CefClient> >(client), L"http://www.google.com", browserSettings); 
+
+	// TODO: Add your specialized code here and/or call the base class
+}
+
+
+void CCEFView::OnSize(UINT nType, int cx, int cy)
+{
+	CView::OnSize(nType, cx, cy);
+	if(m_clientHandler.get())
+	{
+		CefRefPtr<CefBrowser> browser = m_clientHandler->GetBrowser();
+		if(browser)
+		{
+			CefWindowHandle hwnd = browser->GetWindowHandle();
+			RECT rect;
+			this->GetClientRect(&rect);
+			::SetWindowPos(hwnd, HWND_TOP, rect.left, rect.top, rect.right - rect.left, rect.bottom - rect.top, SWP_NOZORDER);
+		}
+	}
+	// TODO: Add your message handler code here
+}

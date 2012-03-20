@@ -8,6 +8,7 @@
 #endif
 
 #include "resource.h"       // main symbols
+#include "include/cef.h"
 
 
 // CCEFApp:
@@ -19,6 +20,7 @@ class CCEFApp : public CWinAppEx
 public:
 	CCEFApp();
 
+	CefRefPtr<CefApp> app;
 
 // Overrides
 public:

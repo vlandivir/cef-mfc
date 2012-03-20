@@ -5,6 +5,7 @@
 #include "stdafx.h"
 #include "cef_mfc.h"
 #include "include/cef.h"
+#include "CEFView.h"
 
 #include "MainFrm.h"
 
@@ -24,6 +25,8 @@ BEGIN_MESSAGE_MAP(CMainFrame, CFrameWndEx)
 	ON_WM_CREATE()
 	ON_COMMAND(ID_VIEW_CUSTOMIZE, &CMainFrame::OnViewCustomize)
 	ON_REGISTERED_MESSAGE(AFX_WM_CREATETOOLBAR, &CMainFrame::OnToolbarCreateNew)
+  ON_COMMAND(ID_CEF_CALLJAVASCRIPTFUNCTION, &CMainFrame::OnCefCallJavaScriptFunction)
+  ON_WM_CLOSE()
 END_MESSAGE_MAP()
 
 static UINT indicators[] =
@@ -43,7 +46,6 @@ CMainFrame::CMainFrame()
 
 CMainFrame::~CMainFrame()
 {
-	CefShutdown();
 }
 
 int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
@@ -202,7 +204,6 @@ BOOL CMainFrame::LoadFrame(UINT nIDResource, DWORD dwDefaultStyle, CWnd* pParent
 	{
 		return FALSE;
 	}
-
 
 	// enable customization button for all user toolbars
 	BOOL bNameValid;

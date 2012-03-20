@@ -70,6 +70,11 @@ BOOL CCEFApp::InitInstance()
 	InitCtrls.dwICC = ICC_WIN95_CLASSES;
 	InitCommonControlsEx(&InitCtrls);
 
+  CefSettings settings;
+	settings.multi_threaded_message_loop = true;
+  // Initialize CEF.
+  CefInitialize(settings, app);
+
 	CWinAppEx::InitInstance();
 
 
@@ -144,7 +149,7 @@ int CCEFApp::ExitInstance()
 {
 	//TODO: handle additional resources you may have added
 	AfxOleTerm(FALSE);
-
+  CefShutdown();
 	return CWinAppEx::ExitInstance();
 }
 

@@ -184,3 +184,23 @@ void CCEFView::OnSize(UINT nType, int cx, int cy)
 	}
 	// TODO: Add your message handler code here
 }
+
+CCEFView * CCEFView::GetView(void)
+{
+  CFrameWnd * pFrame = (CFrameWnd *)(AfxGetApp()->m_pMainWnd);
+
+  CView * pView = pFrame->GetActiveView();
+
+  if ( !pView )
+  {
+    return NULL;
+  }
+  // Fail if view is of wrong kind
+  // (this could occur with splitter windows, or additional
+  // views on a single document
+  if ( ! pView->IsKindOf( RUNTIME_CLASS(CCEFView) ) )
+  {
+    return NULL;
+  }
+  return (CCEFView *) pView;
+}

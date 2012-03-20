@@ -223,3 +223,24 @@ BOOL CMainFrame::LoadFrame(UINT nIDResource, DWORD dwDefaultStyle, CWnd* pParent
 	return TRUE;
 }
 
+void CMainFrame::OnCefCallJavaScriptFunction()
+{
+  CCEFView *pView = CCEFView::GetView();
+  CefRefPtr<CefBrowser> browser = pView->m_clientHandler->GetBrowser();
+  CefRefPtr<CefFrame> frame = browser->GetMainFrame();
+  CefPostTask(TID_UI, NewCefRunnableMethod(pView->m_clientHandler.get(), &ClientHandler::GetURL));
+  frame->ExecuteJavaScript("foo();", "", 0);
+  CefPostTask(TID_UI, NewCefRunnableMethod(pView->m_clientHandler.get(), &ClientHandler::JavaScriptTest));
+}
+
+
+void CMainFrame::OnClose()
+{
+  // TODO: Add your message handler code here and/or call default
+  
+  CCEFView *pView = CCEFView::GetView();
+  CefRefPtr<CefBrowser> browser = pView->m_clientHandler->GetBrowser();
+  browser->CloseBrowser(); 
+  pView->m_clientHandler->m_Browser = 0;
+  CFrameWndEx::OnClose();
+}

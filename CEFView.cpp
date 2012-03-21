@@ -30,6 +30,7 @@ BEGIN_MESSAGE_MAP(CCEFView, CView)
 	ON_WM_CONTEXTMENU()
 	ON_WM_RBUTTONUP()
 	ON_WM_SIZE()
+  ON_WM_KEYDOWN()
 END_MESSAGE_MAP()
 
 // CCEFView construction/destruction
@@ -203,4 +204,15 @@ CCEFView * CCEFView::GetView(void)
     return NULL;
   }
   return (CCEFView *) pView;
+}
+
+
+void CCEFView::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
+{
+  // TODO: Add your message handler code here and/or call default
+  if(nChar == VK_F5)
+  {
+    m_clientHandler->GetBrowser()->Reload();
+  }
+  CView::OnKeyDown(nChar, nRepCnt, nFlags);
 }

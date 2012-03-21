@@ -14,8 +14,17 @@ ClientHandler::~ClientHandler(void)
 void ClientHandler::OnAfterCreated(CefRefPtr<CefBrowser> browser)
 {
 	REQUIRE_UI_THREAD();
-
 	m_Browser = browser;
+}
+
+bool ClientHandler::OnBeforeBrowse(CefRefPtr<CefBrowser> browser,
+                                   CefRefPtr<CefFrame> frame,
+                                   CefRefPtr<CefRequest> request,
+                                   NavType navType,
+                                   bool isRedirect)
+{
+  CefString url = request->GetURL();
+  return false;
 }
 
 void ClientHandler::OnContextCreated(CefRefPtr<CefBrowser> browser,

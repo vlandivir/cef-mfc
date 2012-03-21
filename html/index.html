@@ -1,11 +1,67 @@
 <html>
-  <h1>Local HTML file<h1>
-  <script>
-    var i = 0;
+  <head>
+    <script src="js/jquery-1.7.1.min.js"></script>
+    <script src="js/json2.js"></script>
+
+    <script>
+      var i = 0;
     
-    function foo()
-    {
-      alert('foo');
-    }
-  </script>
+      function log(msg)
+      {
+        dt = new Date();
+        $('<div/>').html(dt.getTime() + ': ' +msg).appendTo('body');
+      }
+    
+      function foo()
+      {
+        alert('foo');
+      }
+      
+      $(function()
+      {
+
+        $('#navigate').click(function()
+        {
+          log('navigate');
+          location.href = 'index.html?param=navigate';
+        });
+
+        $('#ajax').click(function()
+        {
+          log('send ajax request');
+          $.ajax(
+          {
+            type: 'POST',
+            url: 'http://server/ajax.php',
+            data:
+            {
+              action: 'action',
+              param: 'value'
+            },
+            success: function(json)
+            {
+              log('success ajax<br>' + JSON.stringify(json));
+            },
+            error: function(err)
+            {
+              log(JSON.stringify(err));
+            }
+          });
+        });
+
+        log('ready ' + JSON.stringify(window.location));
+
+      });
+    </script>
+  </head>
+
+  <body>
+  <h1>Local HTML file</h1>
+  <p><a href="#">onpage link</a></p>
+  <p><a href="index.html">recursive index (use it to refresh page)</a></p>
+  <p><a href="#" id="navigate">navigate</a></p>
+  <p><a href="#" id="ajax">ajax</a></p>
+  <p><a href="another.html">another html</a></p>
+  <p><a href="http://svg-edit.googlecode.com/svn/branches/2.5.1/editor/svg-editor.html">svg editor</a></p>
+  </body>
 </html>

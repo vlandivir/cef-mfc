@@ -8,7 +8,8 @@ class ClientHandler :
 	public CefClient,
 	public CefLifeSpanHandler,
 	public CefV8ContextHandler,
-  public CefLoadHandler
+  public CefLoadHandler,
+  public CefRequestHandler
 {
 protected:
 public:
@@ -27,6 +28,8 @@ public:
 		{ return this; }
   virtual CefRefPtr<CefLoadHandler> GetLoadHandler() OVERRIDE
       { return this; }
+  virtual CefRefPtr<CefRequestHandler> GetRequestHandler() OVERRIDE
+      { return this; }
 
   // CefLifeSpanHandler methods
   virtual void OnAfterCreated(CefRefPtr<CefBrowser> browser) OVERRIDE;
@@ -42,6 +45,13 @@ public:
   virtual void OnLoadEnd(CefRefPtr<CefBrowser> browser,
                          CefRefPtr<CefFrame> frame,
                          int httpStatusCode) OVERRIDE;
+
+  // CefRequestHandler methods
+  virtual bool OnBeforeBrowse(CefRefPtr<CefBrowser> browser,
+                              CefRefPtr<CefFrame> frame,
+                              CefRefPtr<CefRequest> request,
+                              NavType navType,
+                              bool isRedirect) OVERRIDE;
 
   void GetURL();
   void JavaScriptTest();

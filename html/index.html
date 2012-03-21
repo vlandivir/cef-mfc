@@ -32,6 +32,7 @@
           $.ajax(
           {
             type: 'POST',
+            dataType: 'json',
             url: 'http://server/ajax.php',
             data:
             {
@@ -40,7 +41,7 @@
             },
             success: function(json)
             {
-              log('success ajax<br>' + JSON.stringify(json));
+              log(json.ts + ' success ajax: ' + JSON.stringify(json));
             },
             error: function(err)
             {

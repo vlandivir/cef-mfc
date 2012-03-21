@@ -53,6 +53,18 @@ public:
                               NavType navType,
                               bool isRedirect) OVERRIDE;
 
+  virtual bool OnBeforeResourceLoad(CefRefPtr<CefBrowser> browser,
+                                    CefRefPtr<CefRequest> request,
+                                    CefString& redirectUrl,
+                                    CefRefPtr<CefStreamReader>& resourceStream,
+                                    CefRefPtr<CefResponse> response,
+                                    int loadFlags) OVERRIDE;
+
+  virtual void OnResourceResponse(CefRefPtr<CefBrowser> browser,
+                                  const CefString& url,
+                                  CefRefPtr<CefResponse> response,
+                                  CefRefPtr<CefContentFilter>& filter) OVERRIDE;
+
   void GetURL();
   void JavaScriptTest();
 

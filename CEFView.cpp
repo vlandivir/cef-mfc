@@ -143,6 +143,7 @@ void CCEFView::OnInitialUpdate()
 	info.SetAsChild(GetSafeHwnd(), rect);
 
 	CefBrowserSettings browserSettings;
+  browserSettings.web_security_disabled = true;
 
 	char path_buffer[_MAX_PATH];
 	char drive[_MAX_DRIVE];

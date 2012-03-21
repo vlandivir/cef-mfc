@@ -27,6 +27,25 @@ bool ClientHandler::OnBeforeBrowse(CefRefPtr<CefBrowser> browser,
   return false;
 }
 
+bool ClientHandler::OnBeforeResourceLoad(CefRefPtr<CefBrowser> browser,
+                                         CefRefPtr<CefRequest> request,
+                                         CefString& redirectUrl,
+                                         CefRefPtr<CefStreamReader>& resourceStream,
+                                         CefRefPtr<CefResponse> response,
+                                         int loadFlags)
+{
+  CefString url = request->GetURL();
+  return false;
+}
+
+void ClientHandler::OnResourceResponse(CefRefPtr<CefBrowser> browser,
+                                       const CefString& url,
+                                       CefRefPtr<CefResponse> response,
+                                       CefRefPtr<CefContentFilter>& filter)
+{
+  CefString text = response->GetStatusText();
+}
+
 void ClientHandler::OnContextCreated(CefRefPtr<CefBrowser> browser,
                                      CefRefPtr<CefFrame> frame,
                                      CefRefPtr<CefV8Context> context)

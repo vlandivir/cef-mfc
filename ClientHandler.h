@@ -9,7 +9,8 @@ class ClientHandler :
 	public CefLifeSpanHandler,
 	public CefV8ContextHandler,
   public CefLoadHandler,
-  public CefRequestHandler
+  public CefRequestHandler,
+  public CefContentFilter
 {
 protected:
 public:
@@ -64,6 +65,11 @@ public:
                                   const CefString& url,
                                   CefRefPtr<CefResponse> response,
                                   CefRefPtr<CefContentFilter>& filter) OVERRIDE;
+  
+  virtual void ProcessData(const void* data, int data_size,
+                           CefRefPtr<CefStreamReader>& substitute_data) OVERRIDE;
+
+  virtual void Drain(CefRefPtr<CefStreamReader>& remainder) OVERRIDE;
 
   void GetURL();
   void JavaScriptTest();

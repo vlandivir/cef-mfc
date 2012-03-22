@@ -60,6 +60,9 @@
     <ClInclude Include="ClientHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="string_util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="cef_mfc.cpp">
@@ -78,6 +81,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ClientHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="string_util.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

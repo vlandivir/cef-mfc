@@ -3,6 +3,8 @@
 #include "CEFView.h"
 
 #include <sstream>
+#include <vector>
+#include "string_util.h"
 
 ClientHandler::ClientHandler(void)
 {
@@ -41,74 +43,23 @@ bool ClientHandler::OnBeforeResourceLoad(CefRefPtr<CefBrowser> browser,
   CefParseURL(url, parts);
   if(CefString(&parts.host) == "server")
   {
-      class RequestClient : public CefWebURLRequestClient
-      {
-      public:
-        RequestClient(CefRefPtr<CefBrowser> browser) : browser_(browser) {}
+    CefRefPtr<CefFrame> frame = browser->GetMainFrame();
+    frame->ExecuteJavaScript("log('process ajax request');", url, 0);
+    std::string dump;
+    DumpRequestContents(request, dump);
+    dump = StringReplace(dump, "'", "\\'");
+    dump = StringReplace(dump, "\n", "<br>");
+    dump = StringReplace(dump, "&", "&amp;");
+    dump = "log('" + dump + "');";
+    frame->ExecuteJavaScript(dump, url, 0);
 
-        virtual void OnStateChange(CefRefPtr<CefWebURLRequest> requester, 
-                                   RequestState state)
-        {
-          REQUIRE_UI_THREAD();      
-          if (state == WUR_STATE_DONE) 
-          {
-            //buffer_ = StringReplace(buffer_, "<", "&lt;");
-            //buffer_ = StringReplace(buffer_, ">", "&gt;");
-            std::stringstream ss;
-            ss << "<html><body>Source:<pre>" << buffer_ << "</pre></body></html>";
-
-            browser_->GetMainFrame()->LoadString(ss.str(),
-                "http://tests/weburlrequest");
-          }
-          
-        }
-    
-        virtual void OnRedirect(CefRefPtr<CefWebURLRequest> requester, 
-                                CefRefPtr<CefRequest> request, 
-                                CefRefPtr<CefResponse> response)
-        {
-          REQUIRE_UI_THREAD();
-        }
-    
-        virtual void OnHeadersReceived(CefRefPtr<CefWebURLRequest> requester, 
-                                       CefRefPtr<CefResponse> response)
-        {
-          REQUIRE_UI_THREAD();
-        }
-    
-        virtual void OnProgress(CefRefPtr<CefWebURLRequest> requester, 
-                                uint64 bytesSent, uint64 totalBytesToBeSent)
-        {
-          REQUIRE_UI_THREAD();
-        }
-    
-        virtual void OnData(CefRefPtr<CefWebURLRequest> requester, 
-                            const void* data, int dataLength)
-        {
-          REQUIRE_UI_THREAD();
-          buffer_.append(static_cast<const char*>(data), dataLength);
-        }
-    
-        virtual void OnError(CefRefPtr<CefWebURLRequest> requester, 
-                             ErrorCode errorCode)
-        {
-          REQUIRE_UI_THREAD();
-        }
-
-      protected:
-        CefRefPtr<CefBrowser> browser_;
-        std::string buffer_;
-
-        IMPLEMENT_REFCOUNTING(CefWebURLRequestClient);
-      };
-
-      CefRefPtr<CefRequest> request(CefRequest::CreateRequest());
-      request->SetURL(url);
-
-      CefRefPtr<CefWebURLRequestClient> client(new RequestClient(browser));
-      CefRefPtr<CefWebURLRequest> requester(
-          CefWebURLRequest::CreateWebURLRequest(request, client));
-      return true;
+    /* don't send request to real server */
+    dump = "{\"replaced\":\"value\"}";
+    resourceStream = CefStreamReader::CreateForData((void*)dump.c_str(), dump.size());
+    response->SetMimeType("text/plain");
+    response->SetStatus(200);
+    /**/
+    return false;
   }
   return false;
 }
@@ -118,7 +69,21 @@ void ClientHandler::OnResourceResponse(CefRefPtr<CefBrowser> browser,
                                        CefRefPtr<CefResponse> response,
                                        CefRefPtr<CefContentFilter>& filter)
 {
-  CefString text = response->GetStatusText();
+  CefURLParts parts;
+  CefParseURL(url, parts);
+  if(CefString(&parts.host) == "server")
+  {
+    CefRefPtr<CefFrame> frame = browser->GetMainFrame();
+    frame->ExecuteJavaScript("log('process ajax request');", url, 0);
+    std::string dump;
+    DumpResponseContents(response, dump);
+    dump = StringReplace(dump, "'", "\\'");
+    dump = StringReplace(dump, "\n", "<br>");
+    dump = StringReplace(dump, "&", "&amp;");
+    dump = "log('" + dump + "');";
+    frame->ExecuteJavaScript(dump, url, 0);
+    filter = this;
+  }
 }
 
 void ClientHandler::OnContextCreated(CefRefPtr<CefBrowser> browser,
@@ -127,7 +92,6 @@ void ClientHandler::OnContextCreated(CefRefPtr<CefBrowser> browser,
 {
   REQUIRE_UI_THREAD();
   CefString url = frame->GetURL();
-  //frame->ExecuteJavaScript("alert('JavaScript Alert!!! OnContextCreated')", url, 0);
 }
 
 void ClientHandler::OnLoadStart(CefRefPtr<CefBrowser> browser,
@@ -142,6 +106,22 @@ void ClientHandler::OnLoadEnd(CefRefPtr<CefBrowser> browser,
   REQUIRE_UI_THREAD();
   CefString url = frame->GetURL();
   //frame->ExecuteJavaScript("alert('JavaScript Alert!!! OnLoadEnd')", url, 0);
+}
+
+void ClientHandler::ProcessData(const void* data, int data_size,
+                                CefRefPtr<CefStreamReader>& substitute_data)
+{
+  /* change response data */
+  std::vector<char> v;
+  v.resize(data_size);
+  memcpy(&*v.begin(), data, data_size);
+  std::string s(v.begin(), v.end());
+  s = StringReplace(s, "}", ",\"ts\":\"1234567890\"}");
+  substitute_data = CefStreamReader::CreateForData((void*)s.c_str(), s.size());
+}
+
+void ClientHandler::Drain(CefRefPtr<CefStreamReader>& remainder)
+{
 }
 
 void ClientHandler::GetURL(void)

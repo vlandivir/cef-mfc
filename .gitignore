@@ -1,4 +1,6 @@
 /Debug/*
+/Release/*
+svg-edit*
 
 debug.log
 *.bak

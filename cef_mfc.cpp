@@ -11,6 +11,8 @@
 #include "CEFDoc.h"
 #include "CEFView.h"
 
+#include "scheme.h"
+
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
@@ -74,6 +76,7 @@ BOOL CCEFApp::InitInstance()
 	settings.multi_threaded_message_loop = true;
   // Initialize CEF.
   CefInitialize(settings, app);
+  InitSchemeHandler();
 
 	CWinAppEx::InitInstance();
 

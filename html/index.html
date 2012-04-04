@@ -26,14 +26,14 @@
           location.href = 'index.html?param=navigate';
         });
 
-        $('#ajax').click(function()
+        $('.ajax').click(function()
         {
           log('send ajax request');
           $.ajax(
           {
             type: 'POST',
             dataType: 'json',
-            url: 'http://server/ajax.php',
+            url: 'http://' + $(this).attr('id') + '/ajax.php',
             data:
             {
               action: 'action',
@@ -61,8 +61,9 @@
   <p><a href="#">onpage link</a></p>
   <p><a href="index.html">recursive index (use it to refresh page)</a></p>
   <p><a href="#" id="navigate">navigate</a></p>
-  <p><a href="#" id="ajax">ajax</a></p>
+  <p><a href="#" class="ajax" id="server">ajax</a></p>
+  <p><a href="#" class="ajax" id="another">ajax</a></p>
   <p><a href="another.html">another html</a></p>
-  <p><a href="http://svg-edit.googlecode.com/svn/branches/2.5.1/editor/svg-editor.html">svg editor</a></p>
+  <p><a href="svg-edit/svg-editor.html">local svg editor</a></p>
   </body>
 </html>

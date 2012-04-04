@@ -43,6 +43,12 @@ bool ClientHandler::OnBeforeResourceLoad(CefRefPtr<CefBrowser> browser,
   CefParseURL(url, parts);
   if(CefString(&parts.host) == "server")
   {
+    //HANDLE h = CreateEvent(0, false, false, L"DUMMY_EVENT");
+    //WaitForSingleObject(h, 10000);
+  }
+  
+  if(CefString(&parts.host) == "_server" || CefString(&parts.host) == "another")
+  {
     CefRefPtr<CefFrame> frame = browser->GetMainFrame();
     frame->ExecuteJavaScript("log('process ajax request');", url, 0);
     std::string dump;
@@ -51,14 +57,17 @@ bool ClientHandler::OnBeforeResourceLoad(CefRefPtr<CefBrowser> browser,
     dump = StringReplace(dump, "\n", "<br>");
     dump = StringReplace(dump, "&", "&amp;");
     dump = "log('" + dump + "');";
-    frame->ExecuteJavaScript(dump, url, 0);
+    //frame->ExecuteJavaScript(dump, url, 0);
 
-    /* don't send request to real server */
-    dump = "{\"replaced\":\"value\"}";
-    resourceStream = CefStreamReader::CreateForData((void*)dump.c_str(), dump.size());
-    response->SetMimeType("text/plain");
-    response->SetStatus(200);
-    /**/
+    if(CefString(&parts.host) == "another")
+    {
+      /* don't send request to real server */
+      dump = "{\"replaced\":\"value\"}";
+      resourceStream = CefStreamReader::CreateForData((void*)dump.c_str(), dump.size());
+      response->SetMimeType("text/plain");
+      response->SetStatus(200);
+      /**/
+    }
     return false;
   }
   return false;
@@ -81,7 +90,7 @@ void ClientHandler::OnResourceResponse(CefRefPtr<CefBrowser> browser,
     dump = StringReplace(dump, "\n", "<br>");
     dump = StringReplace(dump, "&", "&amp;");
     dump = "log('" + dump + "');";
-    frame->ExecuteJavaScript(dump, url, 0);
+    //frame->ExecuteJavaScript(dump, url, 0);
     filter = this;
   }
 }

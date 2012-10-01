@@ -4,7 +4,7 @@
 
 #include "stdafx.h"
 #include "cef_mfc.h"
-#include "include/cef.h"
+#include "include/cef_base.h"
 #include "CEFView.h"
 
 #include "MainFrm.h"

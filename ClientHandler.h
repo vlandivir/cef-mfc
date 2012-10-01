@@ -1,6 +1,14 @@
 #pragma once
-#include "include/cef.h"
+#include "include/cef_base.h"
+#include "include/cef_client.h"
+#include "include/cef_life_span_handler.h"
+#include "include/cef_v8context_handler.h"
+#include "include/cef_load_handler.h"
+#include "include/cef_request_handler.h"
+#include "include/cef_content_filter.h"
 #include "include/cef_runnable.h"
+#include "include/cef_scheme.h"
+#include "include/cef_url.h"
 
 #define REQUIRE_UI_THREAD()   ASSERT(CefCurrentlyOn(TID_UI));
 #define REQUIRE_IO_THREAD()   ASSERT(CefCurrentlyOn(TID_IO));

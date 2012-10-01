@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "include/cef.h"
+#include "include/cef_base.h"
 #include "ClientHandler.h"
 
 class CCEFDoc : public CDocument

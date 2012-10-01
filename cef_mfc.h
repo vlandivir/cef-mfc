@@ -8,8 +8,8 @@
 #endif
 
 #include "resource.h"       // main symbols
-#include "include/cef.h"
-
+#include "include/cef_base.h"
+#include "include/cef_app.h"
 
 // CCEFApp:
 // See cef_mfc.cpp for the implementation of this class
